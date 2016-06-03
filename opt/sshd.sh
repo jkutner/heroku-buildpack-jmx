@@ -29,7 +29,7 @@ EOF
 
   if [ -n "$ngrok_tunnel" ]; then
     echo "JConsole Command: heroku jmx:jconsole $(whoami)@${ip_addr} ${ngrok_tunnel}"
-  elif
+  else
     echo "JConsole Command: [error] could not start ngrok"
   fi
 
