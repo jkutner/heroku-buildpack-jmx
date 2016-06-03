@@ -27,7 +27,11 @@ EOF
   sleep 1
   ngrok_tunnel=$(curl -s -L localhost:4040/inspect/http | grep -o "tcp://[^:]*:[0-9]*" | sed 's/tcp:\/\///')
 
-  echo "Start JConsole: heroku jmx:jconsole $(whoami)@${ip_addr} ${ngrok_tunnel}"
+  if [ -n "$ngrok_tunnel" ]; then
+    echo "JConsole Command: heroku jmx:jconsole $(whoami)@${ip_addr} ${ngrok_tunnel}"
+  elif
+    echo "JConsole Command: [error] could not start ngrok"
+  fi
 
   export JAVA_TOOL_OPTIONS="${JAVA_TOOL_OPTIONS}\
    -Dcom.sun.management.jmxremote\
