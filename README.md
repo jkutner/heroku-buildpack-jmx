@@ -1,4 +1,4 @@
-# Heroku SSH Buildpack
+# Heroku JMX Buildpack
 
 This is a [Heroku Buildpack](https://devcenter.heroku.com/articles/buildpacks)
 that allows you to SSH into a running [dyno](https://devcenter.heroku.com/articles/dynos).
