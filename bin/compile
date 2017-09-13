@@ -18,7 +18,7 @@ OPT_DIR=$BP_DIR/../opt/
 echo -n "-----> Installing ngrok... "
 mkdir -p $BUILD_DIR/.profile.d
 mkdir -p $BUILD_DIR/.heroku/bin
-curl --silent --retry 3 -o ngrok.zip -L "https://dl.ngrok.com/ngrok_2.0.19_linux_amd64.zip" | indent
+curl --silent --retry 3 -o ngrok.zip -L "https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip" | indent
 unzip ngrok.zip -d $BUILD_DIR/.heroku/bin > /dev/null 2>&1
 chmod +x $BUILD_DIR/.heroku/bin/ngrok
 
